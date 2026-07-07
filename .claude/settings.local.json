@@ -9,7 +9,19 @@
       "Bash(git push *)",
       "Bash(docker build *)",
       "Bash(ls -la \"C:\\\\Users\\\\va-alumno\\\\Downloads\\\\Duoc UC Landing - Simulador Campaña.html\" && ls -la \"C:\\\\Users\\\\va-alumno\\\\Desktop\\\\LANDING PAGE - MARKETING DIGITAL\\\\Duoc UC Landing - Simulador Campaña.html\")",
-      "Bash(cp \"C:\\\\Users\\\\va-alumno\\\\Downloads\\\\Duoc UC Landing - Simulador Campaña.html\" \"C:\\\\Users\\\\va-alumno\\\\Desktop\\\\LANDING PAGE - MARKETING DIGITAL\\\\Duoc UC Landing - Simulador Campaña.html\" && ls -la \"C:\\\\Users\\\\va-alumno\\\\Desktop\\\\LANDING PAGE - MARKETING DIGITAL\\\\Duoc UC Landing - Simulador Campaña.html\")"
+      "Bash(cp \"C:\\\\Users\\\\va-alumno\\\\Downloads\\\\Duoc UC Landing - Simulador Campaña.html\" \"C:\\\\Users\\\\va-alumno\\\\Desktop\\\\LANDING PAGE - MARKETING DIGITAL\\\\Duoc UC Landing - Simulador Campaña.html\" && ls -la \"C:\\\\Users\\\\va-alumno\\\\Desktop\\\\LANDING PAGE - MARKETING DIGITAL\\\\Duoc UC Landing - Simulador Campaña.html\")",
+      "Bash(python3 -c ' *)",
+      "Bash(awk '{ print length, NR }' \"Duoc UC Landing - Simulador Campaña.html\")",
+      "Bash(grep -n '__bundler_ref\\\\|bundler://\\\\|3f422bf8' \"Duoc UC Landing - Simulador Campaña.html\")",
+      "Bash(node scripts/unbundle.js)",
+      "Bash(node -e ' *)",
+      "Bash(echo \"diff exit: $?\")",
+      "Bash(npm install *)",
+      "Bash(mv \"3e4c0f8e-ce12-4b80-b1bc-e2d046d8407b.woff2\" \"dm-sans-latin-ext.woff2\")",
+      "Bash(mv \"74e3a6c2-9e56-4769-8a83-146d985a5956.woff2\" \"dm-sans-latin.woff2\")",
+      "Bash(mv \"28122d73-6b32-4a49-a526-ba0364f7e38f.woff2\" \"space-grotesk-vietnamese.woff2\")",
+      "Bash(mv \"c2c2b8c9-3370-441d-bba9-e4acb2341f4d.woff2\" \"space-grotesk-latin-ext.woff2\")",
+      "Bash(mv \"c320d71a-36f8-4d66-a6d1-5843e2c10907.woff2\" \"space-grotesk-latin.woff2\")"
     ]
   }
 }
