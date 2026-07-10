@@ -449,6 +449,9 @@ class Component extends DCLogic {
     // Results
     results: null,
     showResults: false,
+    // UTM tracking
+    utmCampaign: new URLSearchParams(window.location.search).get('utm_campaign') || '',
+    utmContent: new URLSearchParams(window.location.search).get('utm_content') || '',
   };
 
   // Product catalog
@@ -535,10 +538,39 @@ class Component extends DCLogic {
     if (!this.validateForm()) return;
     this.haptic();
     this.setState({ simStep: 6 });
+    this.sendToHubSpot();
     // Simulate loading
     setTimeout(() => {
       this.calculateResults();
     }, 2800);
+  }
+
+  sendToHubSpot() {
+    const PORTAL_ID = 'REEMPLAZAR_CON_TU_PORTAL_ID';
+    const FORM_GUID = 'REEMPLAZAR_CON_TU_FORM_GUID';
+    const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
+
+    const payload = {
+      fields: [
+        { name: 'firstname', value: this.state.formName },
+        { name: 'email', value: this.state.formEmail },
+        { name: 'phone', value: this.state.formWhatsapp },
+        { name: 'utm_campaign', value: this.state.utmCampaign },
+        { name: 'utm_content', value: this.state.utmContent },
+      ],
+      context: {
+        pageUri: window.location.href,
+        pageName: document.title,
+      },
+    };
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch((err) => {
+      console.error('Error enviando datos a HubSpot:', err);
+    });
   }
 
   calculateResults() {
